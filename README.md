@@ -52,7 +52,11 @@ Serve the application by running the `serve` artisan command, on project root di
 php artisan serve
 ```
 
-Your API is now running in [localhost:8000/api/](localhost:8000/api/)
+Your App is now running in [localhost:8000/](localhost:8000/)
+
+Import tha csv File.
+
+Enjoy!
 
 
 Enjoy!

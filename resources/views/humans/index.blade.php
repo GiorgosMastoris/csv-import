@@ -23,13 +23,13 @@
             @csrf
         <tr>
             <th scope="row">{{ $human->id }}</th>
-            <input type="hidden" name="id" class="form-control" value="{{ $human->id }}">
-            <td><input type="text" name="first_name" class="form-control" value="{{ $human->first_name }}"></td>
-            <td><input type="text" name="last_name" class="form-control" value="{{ $human->last_name }}"></td>
-            <td><input type="text" name="email" class="form-control" value="{{ $human->email }}"></td>
-            <td><input type="text" name="phone" class="form-control" value="{{ $human->phone }}"></td>
-            <td><input type="text" name="address" class="form-control" value="{{ $human->address }}"></td>
-            <td><input type="text" name="town" class="form-control" value="{{ $human->town }}"></td>
+            <input type="hidden"    name="id" class="form-control" value="{{ $human->id }}">
+            <td><input type="text"  name="first_name" class="form-control" value="{{ $human->first_name }}" required></td>
+            <td><input type="text"  name="last_name" class="form-control" value="{{ $human->last_name }}" required></td>
+            <td><input type="email" name="email" class="form-control" value="{{ $human->email }}" required></td>
+            <td><input type="text"  name="phone" class="form-control" value="{{ $human->phone }}" required></td>
+            <td><input type="text"  name="address" class="form-control" value="{{ $human->address }}" required></td>
+            <td><input type="text"  name="town" class="form-control" value="{{ $human->town }}"></td>
             <td>
                <input type="submit" class="edit" value="Edit">
                 <a href="{{route('humans.destroy', $human->id)}}">Delete</a>
@@ -39,6 +39,3 @@
           @endforeach
     </tbody>
   </table>
-
-
-<script>
